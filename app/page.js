@@ -44,7 +44,7 @@ export default function HomePage() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-8 space-x-4"
+          className="mt-8 space-x-4 space-y-6"
         >
           <Link
             href="/projects"
@@ -69,7 +69,7 @@ export default function HomePage() {
           <a
             href="/cv.pdf" // Ensure this matches your CV file's name and path
             download
-            className="inline-block px-8 py-4 bg-yellow-400 text-gray-900 font-semibold text-lg rounded-lg shadow-lg transform transition duration-500 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl"
+            className="inline-block px-8 py-3 bg-yellow-400 text-gray-900 font-semibold text-lg rounded-lg shadow-lg transform transition duration-500 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl"
           >
             Download My Resume
           </a>
