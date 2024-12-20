@@ -86,7 +86,7 @@ export default function PortfolioPage() {
           transition={{ duration: 1 }}
           className="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
         >
-          My Portfolio
+          Projects
         </motion.h1>
 
         {/* Projects List */}

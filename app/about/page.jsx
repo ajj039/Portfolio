@@ -23,7 +23,9 @@ export default function AboutPage() {
     <main className="bg-gray-900 text-white min-h-screen flex flex-col">
       {/* Navigation Bar without links */}
       <nav className="fixed top-0 left-0 w-full px-6 py-4 flex justify-between items-center bg-black bg-opacity-30 backdrop-blur-md z-10">
-        <h1 className="text-2xl font-bold text-yellow-300">Jaydeep Joshi</h1>
+        <Link href="/" className="text-2xl font-bold text-yellow-300">
+          Jaydeep Joshi
+        </Link>
       </nav>
 
       {/* Main Content */}

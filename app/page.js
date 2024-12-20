@@ -65,6 +65,14 @@ export default function HomePage() {
           >
             About
           </Link>
+
+          <a
+            href="/cv.pdf" // Ensure this matches your CV file's name and path
+            download
+            className="inline-block px-8 py-4 bg-yellow-400 text-gray-900 font-semibold text-lg rounded-lg shadow-lg transform transition duration-500 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl"
+          >
+            Download My Resume
+          </a>
         </motion.div>
       </section>
     </main>
