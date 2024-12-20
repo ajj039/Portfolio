@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useForm, ValidationError } from "@formspree/react";
 
 // import { sendMessage } from "../action";
 
