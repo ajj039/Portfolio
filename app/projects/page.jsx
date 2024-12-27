@@ -7,6 +7,17 @@ import Link from "next/link";
 export default function PortfolioPage() {
   const projects = [
     {
+      name: "Property Ease - webapp for managing your rental properties",
+      duration: "Completed",
+      links: "https://prop-ease-git-main-jaydeep-joshis-projects.vercel.app/",
+      tech: "Nextjs, Tailwindcss, Mongodb, Cloudinary, Next auth",
+      description: [
+        "Created a responsive UI with tailwind",
+        "Manage the social google  login authentication with next-auth library",
+        "create , edit and save properties using mongodb database",
+      ],
+    },
+    {
       name: "Room Bookings",
       duration: "Completed",
       tech: "Next, React, Tailwind, Redux Toolkit",
@@ -66,11 +77,12 @@ export default function PortfolioPage() {
       ],
     },
     ,
+    ,
   ];
 
   return (
     <main className="bg-gray-900 text-white min-h-screen flex flex-col">
-      {/* Navigation Bar without links */}
+      {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full px-6 py-6 flex justify-between items-center bg-black bg-opacity-60 backdrop-blur-lg z-10">
         <Link className="text-2xl font-bold text-yellow-300" href="/">
           Jaydeep Joshi
@@ -90,12 +102,15 @@ export default function PortfolioPage() {
         </motion.h1>
 
         {/* Projects List */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4 sm:px-8 md:px-12">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4 sm:px-8 md:px-12 z-30">
           {projects.map((project, index) => (
-            <>
-              {/* <a href={project.links} target="_blank"> */}
+            <a
+              href={project.links}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.div
-                key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.3 }}
@@ -106,7 +121,6 @@ export default function PortfolioPage() {
                 </h2>
                 <p className="mt-2 text-sm text-gray-400">{project.duration}</p>
                 <p className="mt-1 text-sm text-gray-400">{project.tech}</p>
-
                 <ul className="mt-4 space-y-2 text-gray-200 list-disc pl-6">
                   {project.description.map((desc, idx) => (
                     <li key={idx} className="text-lg">
@@ -115,8 +129,7 @@ export default function PortfolioPage() {
                   ))}
                 </ul>
               </motion.div>
-              {/* </a> */}
-            </>
+            </a>
           ))}
         </div>
       </section>

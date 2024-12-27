@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Reactjs from "../../public/images/react.jpg";
 import Next from "../../public/images/next.jpg";
 import Image from "next/image";
+import Mongo from "../../public/images/mongodb.png";
 
 import Express from "../../public/images/express.png";
 
@@ -101,6 +102,15 @@ export default function AboutPage() {
                 className="w-16 mx-auto mb-2"
               />
               <p>Express.js</p>
+            </div>
+
+            <div className="text-center">
+              <Image
+                src={Mongo}
+                alt="Express.js"
+                className="w-16 mx-auto mb-2"
+              />
+              <p>MongoDB</p>
             </div>
             <div className="text-center">
               <Image src={Python} alt="Python" className="w-16 mx-auto mb-2" />
