@@ -18,8 +18,19 @@ import Html from "../../public/images/html.jpg";
 import Css from "../../public/images/css.jpg";
 import Tailwind from "../../public/images/tailwindcss.jpg";
 import Link from "next/link";
+import { IoMdDownload } from "react-icons/io";
 
 export default function AboutPage() {
+  const certifications = [
+    {
+      title: "React Essential Training, (Linkedin Learning)",
+      href: "/react-essential.pdf", // Ensure this matches your CV file's name and path
+    },
+    {
+      title: "MERN Essential Training, (Linkedin Learning)",
+      href: "/mern-essential.pdf", // Ensure this matches your CV file's name and path
+    },
+  ];
   return (
     <main className="bg-gray-900 text-white min-h-screen flex flex-col">
       {/* Navigation Bar without links */}
@@ -40,18 +51,6 @@ export default function AboutPage() {
         >
           About Me
         </motion.h1>
-
-        {/* <motion.p
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-6 text-lg text-gray-200"
-        >
-          I’m a Frontend Developer with <strong>2.6 years of experience</strong>{" "}
-          in building engaging and interactive web applications. I’m passionate
-          about creating beautiful, user-friendly interfaces and working with
-          cutting-edge technologies like React, TypeScript, Next.js, and more.
-        </motion.p> */}
 
         {/* Tech Stack Section */}
         <section className="mt-16">
@@ -117,6 +116,25 @@ export default function AboutPage() {
               <p>Python</p>
             </div>
           </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold text-yellow-300">Certifications</h2>
+          <ul className="space-y-4 mt-6 text-lg">
+            {certifications.map((certi, index) => {
+              return (
+                <li key={index}>
+                  <span className="font-semibold text-yellow-500">
+                    {certi.title}{" "}
+                    <a href={certi.href} download>
+                      <IoMdDownload className="inline-block ml-3 text-2xl" />
+                    </a>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </section>
 
         {/* Experience Section */}
