@@ -143,21 +143,14 @@ export default function AboutPage() {
           <ul className="space-y-4 mt-6 text-lg">
             <li>
               <span className="font-semibold text-yellow-500">
-                Front-end Developer – 03/2022 to 11/2022 (On-Site)
-              </span>
-              <br />
-              Nimblechapps, Ahmedabad, Gujarat
-            </li>
-            <li>
-              <span className="font-semibold text-yellow-500">
-                Front-end Developer – 12/2022 to 08/2023 (Remote)
+                Front-end Developer – 03/2022 to 08/2023 (Remote)
               </span>
               <br />
               Six 30 Labs Private Limited, Bangalore
             </li>
             <li>
               <span className="font-semibold text-yellow-500">
-                Front-end Developer – 09/2023 to 09/2024 (On-Site)
+                Front-end Developer – 09/2023 to 12/2024 (On-Site)
               </span>
               <br />
               Terotam Techlabs, Ahmedabad, Gujarat
