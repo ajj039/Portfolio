@@ -81,10 +81,10 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <main className="bg-gray-900 text-white min-h-screen flex flex-col">
+    <main className="bg-[#0a0a0a] text-white min-h-screen flex flex-col items-center">
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full px-6 py-6 flex justify-between items-center bg-black bg-opacity-60 backdrop-blur-lg z-10">
-        <Link className="text-2xl font-bold text-yellow-300" href="/">
+        <Link className="text-2xl font-bold text-indigo-400" href="/">
           Jaydeep Joshi
         </Link>
       </nav>
@@ -96,13 +96,13 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
+          className="text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400"
         >
-          Projects
+          My Projects
         </motion.h1>
 
-        {/* Projects List */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4 sm:px-8 md:px-12 z-30">
+        {/* Projects Grid */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-4 sm:px-8 md:px-12 z-30">
           {projects.map((project, index) => (
             <a
               href={project.links}
@@ -114,14 +114,14 @@ export default function PortfolioPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.3 }}
-                className="bg-gray-800 p-8 rounded-xl shadow-xl transform transition-all duration-500 ease-out hover:rotate-6 hover:scale-105 hover:shadow-2xl"
+                className="bg-gray-800 bg-opacity-70 p-6 rounded-xl shadow-lg backdrop-blur-md transform transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl hover:bg-opacity-90"
               >
-                <h2 className="text-2xl font-semibold text-yellow-400">
+                <h2 className="text-2xl font-semibold text-indigo-400">
                   {project.name}
                 </h2>
                 <p className="mt-2 text-sm text-gray-400">{project.duration}</p>
                 <p className="mt-1 text-sm text-gray-400">{project.tech}</p>
-                <ul className="mt-4 space-y-2 text-gray-200 list-disc pl-6">
+                <ul className="mt-4 space-y-2 text-gray-300 list-disc pl-6 text-left">
                   {project.description.map((desc, idx) => (
                     <li key={idx} className="text-lg">
                       {desc}
@@ -133,13 +133,6 @@ export default function PortfolioPage() {
           ))}
         </div>
       </section>
-
-      {/* Background Shapes */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-16 -left-16 w-72 h-72 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 blur-3xl animate-pulse" />
-        <div className="absolute bottom-16 right-16 w-96 h-96 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-20 blur-3xl animate-pulse delay-2000" />
-        <div className="absolute top-32 right-40 w-64 h-64 bg-gradient-to-r from-blue-300 to-cyan-400 rounded-full opacity-30 blur-3xl animate-pulse delay-4000" />
-      </div>
     </main>
   );
 }

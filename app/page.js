@@ -6,72 +6,64 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 via-blue-500 to-indigo-800 overflow-hidden">
-      {/* Animated Background Shapes */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-16 -left-16 w-72 h-72 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 blur-3xl animate-pulse" />
-        <div className="absolute bottom-16 right-16 w-96 h-96 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-20 blur-3xl animate-pulse delay-2000" />
-        <div className="absolute top-32 right-40 w-64 h-64 bg-gradient-to-r from-blue-300 to-cyan-400 rounded-full opacity-30 blur-3xl animate-pulse delay-4000" />
+    <main className="relative flex items-center justify-center min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
+      {/* Abstract Background Shapes */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute w-[700px] h-[700px] bg-gradient-radial from-purple-500 to-transparent opacity-40 blur-[200px]" />
+        <div className="absolute w-[500px] h-[500px] bg-gradient-radial from-blue-500 to-transparent opacity-30 blur-[150px] left-1/3 top-1/4" />
+        <div className="absolute w-[400px] h-[400px] bg-gradient-radial from-pink-500 to-transparent opacity-30 blur-[150px] right-1/3 bottom-1/4" />
       </div>
 
-      <section className="text-center max-w-4xl px-6 relative z-10">
-        {/* Heading with Animation */}
+      <section className="text-center max-w-5xl px-8 relative z-10">
+        {/* Animated Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl font-extrabold text-white"
+          className="text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-400"
         >
-          Hello, I’m{" "}
-          <span className="text-yellow-300 underline decoration-wavy decoration-indigo-500">
-            Jaydeep Joshi
-          </span>
+          Welcome, I'm Jaydeep Joshi
         </motion.h1>
 
-        {/* Description with Animation */}
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mt-6 text-lg text-gray-200"
+          className="mt-6 text-xl text-gray-400 leading-relaxed"
         >
-          A Frontend Developer with <strong>2.6 years of experience</strong> in
-          creating dynamic and responsive webapp.
+          A passionate Frontend Developer with <strong>2.6 years</strong> of
+          experience, specializing in building immersive and high-performance
+          web applications.
         </motion.p>
 
-        {/* Buttons with Animation */}
+        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-8 space-x-4 space-y-6"
+          className="mt-10 flex flex-wrap justify-center gap-6"
         >
           <Link
             href="/projects"
-            className="px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105"
+            className="px-8 py-3 text-lg font-medium text-white bg-indigo-600 rounded-xl shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-105"
           >
-            View My Work
+            Explore My Work
           </Link>
-          {/* <Link
-            href="/contact"
-            className="px-8 py-3 text-lg font-medium text-blue-600 bg-white rounded-lg shadow-md hover:bg-gray-100 transition-transform transform hover:scale-105"
-          >
-            Get in Touch
-          </Link> */}
 
           <Link
             href="/about"
-            className="px-8 py-3 text-lg font-medium text-blue-600 bg-white rounded-lg shadow-md hover:bg-gray-100 transition-transform transform hover:scale-105"
+            className="px-8 py-3 text-lg font-medium text-gray-900 bg-white rounded-xl shadow-lg hover:bg-gray-200 transition-transform transform hover:scale-105"
           >
-            About
+            Learn More About Me
           </Link>
 
           <a
-            href="/cv.pdf" // Ensure this matches your CV file's name and path
+            href="/cv.pdf"
             download
-            className="inline-block px-8 py-3 bg-yellow-400 text-gray-900 font-semibold text-lg rounded-lg shadow-lg transform transition duration-500 ease-out hover:scale-105 hover:bg-yellow-500 hover:shadow-2xl"
+            className="px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-semibold text-lg rounded-xl shadow-lg transform transition duration-500 ease-out hover:scale-105 hover:shadow-2xl"
           >
-            Download My Resume
+            Get My Resume
           </a>
         </motion.div>
       </section>
